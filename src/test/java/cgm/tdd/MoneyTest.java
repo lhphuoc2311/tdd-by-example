@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class MoneyTest {
 
     @Test
-    void testMultiplication(){
+    void testMultiplicationDollar(){
 
         Dollar five = new Dollar(5);
         Dollar product = five.times(2);
@@ -23,10 +23,29 @@ public class MoneyTest {
     }
 
     @Test
-    void testEquality() {
+    void testEqualityDollar() {
 
         assertEquals(new Dollar(5), new Dollar(5));
         assertNotEquals(new Dollar(8), new Dollar(5));
+        
+    }
+
+    @Test
+    void testMultiplicationFranC(){
+
+        Franc five = new Franc(5);
+        Franc product = five.times(2);
+        assertEquals(new Franc(10), product);
+        product = five.times(3);
+        assertEquals(new Franc(15), product);
+
+    }
+
+    @Test
+    void testEqualityFranc() {
+
+        assertEquals(new Franc(5), new Franc(5));
+        assertNotEquals(new Franc(8), new Franc(5));
         
     }
 
