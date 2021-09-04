@@ -4,9 +4,8 @@
 */
 package cgm.tdd;
 
-public class Franc {
+public class Franc extends Money {
 
-    private int amount;
 
     public Franc(int amount){
         this.amount = amount;
@@ -17,11 +16,7 @@ public class Franc {
         return new Franc(amount * multiplier);
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        Franc dollar = (Franc) obj;
-        return dollar.amount == this.amount;
-    }
+  
 
     
 }
